@@ -11,6 +11,8 @@ model User {
   name      String     @db.VarChar(100)
   email     String     @db.VarChar(100) @unique
   phone     String?    @db.VarChar(100)
+  password  String     @db.VarChar(100)
+  isAdmin   Boolean    @default(false)
   posts     Post[]
 
   @@map("users")
